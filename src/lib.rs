@@ -1,4 +1,4 @@
-//! # handl-plugin-engine-lex
+//! # hnl-engine-lex
 //!
 //! The **abstraction** crate for the lex operation (ADR-0044 §3).
 //!
@@ -6,8 +6,8 @@
 //! no engine) and a future engine crate. This crate defines the `Lexer`
 //! operation marker, [`LexerRequest`], and the [`LexerEngine`] trait that
 //! engines implement. **No engine code lives here** — the abstraction is the
-//! contract; a future `plugin-engine-lex-logos` (or the lexer half of
-//! `plugin-engine-parse-pratt`) implements it.
+//! contract; a future `hnl-engine-lex-logos` (or the lexer half of
+//! `hnl-engine-parse-pratt`) implements it.
 //!
 //! Engines consume [`handl_language::Language`] **data** — they read
 //! `lang.tokens` to decide how to tokenize, not Rust `Behavior` impls. This is
