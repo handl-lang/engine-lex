@@ -2,17 +2,18 @@
 name = "hnl-engine-lex"
 version = "0.1.0"
 edition = "2024"
-description = "The **abstraction** crate for the lex operation (ADR-0044 §3)."
+rust-version = "1.85"
+description = "The abstraction crate for the lex operation (ADR-0044 §3)."
 license = "MIT"
 repository = "https://github.com/handl-lang/engine-lex"
+homepage = "https://handl-lang.github.io/docs/engine-lex/"
+documentation = "https://handl-lang.github.io/docs/engine-lex/reference/"
+readme = "README.md"
+keywords = ["handl", "engine", "lexer", "language-as-data"]
+categories = ["parser-implementations", "compilers"]
+# Git-install only: https://github.com/handl-lang/engine-lex (no crates.io).
+publish = false
 
 [dependencies]
 handl-language = { git = "https://github.com/handl-lang/kernel", branch = "main" }
 serde_json = "1"
-
-[patch."https://github.com/handl-lang/engine"]
-hnl-engine = { path = "../engine" }
-
-[patch."https://github.com/handl-lang/kernel"]
-handl-language = { path = "../kernel/crates/handl-language" }
-handl-value = { path = "../kernel/crates/handl-value" }
