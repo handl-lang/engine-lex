@@ -93,7 +93,7 @@ mod tests {
         let l1 = Lexer;
         let l2 = Lexer;
         assert_eq!(l1, l2);
-        let l3 = Lexer::default();
+        let l3 = Lexer;
         assert_eq!(l1, l3);
     }
 
