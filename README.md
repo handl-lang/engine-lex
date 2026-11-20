@@ -1,14 +1,18 @@
 # engine-lex
 
-`hnl-engine-lex` — The **abstraction** crate for the lex operation (ADR-0044 §3).
+`hnl-engine-lex` — the abstraction crate for the lex operation.
+
+An `engine-*` crate: the trait/type surface for tokenization that concrete
+lexer engines (`engine-lex-pattern`) implement.
 
 ## Development
 
 ```bash
-cargo fmt --check && cargo clippy --all-targets -- -D warnings && cargo test
+cargo xtask gate        # fmt --check → clippy -D warnings → test → doc
 ```
 
-`ci.sh` is the gate (fmt → clippy → test → doc). Deps resolve from git, so no
+`cargo xtask` wraps the repo's `xtask/` crate (`fmt`, `clippy`, `test`, `doc`,
+`check`, `gate`); `ci.sh` is the gate entry. Deps resolve from git, so no
 sibling checkouts are needed; a plain clone test-runs as-is.
 
 ## License
@@ -17,10 +21,4 @@ MIT.
 
 ## Documentation
 
-Published site (Diátaxis): <https://handl-lang.github.io/docs/engine-lex/>
-
-- [Reference](https://handl-lang.github.io/docs/engine-lex/reference/) — public API surface
-- [How-to](https://handl-lang.github.io/docs/engine-lex/how-to/) — task recipes
-- [Explanation](https://handl-lang.github.io/docs/engine-lex/explanation/) — design and rationale
-
-Decision records live on the `project` branch under `project/adrs/`.
+<https://handl-lang.github.io/docs/engine-lex/>
