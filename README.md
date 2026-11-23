@@ -2,7 +2,7 @@
 
 `hnl-tool-lex` — the abstraction crate for the lex operation.
 
-An `engine-*` crate: the trait/type surface for tokenization that concrete
+A `tool-*` crate: the trait/type surface for tokenization that concrete
 lexer engines (`tool-lex-pattern`) implement.
 
 ## Development
