@@ -12,7 +12,7 @@
 
 | crate | role |
 |---|---|
-| `hnl-engine-lex` | abstraction — contract only |
+| `hnl-tool-lex` | abstraction — contract only |
 
 ## Build and test
 

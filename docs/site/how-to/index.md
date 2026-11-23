@@ -5,4 +5,4 @@ repos it patches.
 
 ## Implement a lexer
 
-Implement `LexerEngine`; return tokens plus the advanced position. Keep policy — patterns, priority, block forms — in `Language` data rather than in the engine, as `engine-lex-pattern` does.
+Implement `LexerEngine`; return tokens plus the advanced position. Keep policy — patterns, priority, block forms — in `Language` data rather than in the engine, as `tool-lex-pattern` does.
