@@ -12,4 +12,4 @@
 # Regenerate/extend by editing the family campaign in the handl-gates
 # bundle, or replace this file with a local composition — local keys
 # win over the include on merge.
-include: tamias:handl-gates@0.3.2//gates/rust.yaml
+include: tamias:handl-gates@0.3.3//gates/rust.yaml
