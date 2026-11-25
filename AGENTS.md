@@ -1,3 +1,33 @@
+# Agent guide — tool-lex
+
+`hnl-tool-lex` — the abstraction crate for the lex operation: the
+trait/type surface for tokenization that concrete lexer engines
+(`tool-lex-pattern`) implement. `publish = false` (git-install only).
+Rust 2024.
+
+## Layout
+
+| path | role |
+| --- | --- |
+| `src/lib.rs` | the whole surface — lexer traits/types |
+| `docs/` | operation doc |
+| `xtask/`, `workflows/gate.yaml`, `bupha.toml`, `.cargo/` | vendored repo gate + CI wiring |
+
+## Contract
+
+- Deps resolve from git — `handl-language` → `handl-lang/kernel`
+  (pinned `tag = "v0.1.0"`, not `branch = "main"` — check Cargo.toml
+  before bumping).
+- Abstraction only: no tokenizer implementation lives here — engines
+  implement the traits defined in `lib.rs`.
+
+## Verification
+
+```bash
+cargo xtask gate   # fmt --check → clippy -D warnings → test → doc
+```
+
+
 <!-- myco:agent-awareness -->
 
 ## Agent awareness
